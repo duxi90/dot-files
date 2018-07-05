@@ -1,9 +1,16 @@
 # .bashrc
 
-# Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="\[$(tput setaf 2)\]\[$(tput bold)\]\D{%F %T} [\u@\h \W]\n\\$ \[$(tput sgr0)\]"
+# PS1 Color
+RCol='\[\e[0m\]'
+Red='\[\e[0;31m\]'
+Gre='\[\e[0;32m\]'
+BYel='\[\e[1;33m\]'
+BBlu='\[\e[1;34m\]'
+Pur='\[\e[0;35m\]'
+LCya='\[\e[1;36m\]'
+export PS1="${LCya}[${Gre}\u${RCol}${RCol}@${BBlu}\h ${Pur}\W${LCya}] ${BYel}<<\t>>\n${BYel}\\$ ${RCol}"
 
-HISTSIZE=100000 
+HISTSIZE=100000
 
 #-------------------------------------------------------------
 # Docker aliases
